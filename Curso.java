@@ -16,12 +16,38 @@ public class Curso implements Certificavel{
         this.alunos.add(new Aluno("Pedro", "pedro@gmail.com", 10637406));
     }
 
-    public void adicionarAluno(Aluno a) {
-        this.alunos.add(a);
+    public void adicionarAluno(Aluno aluno) {
+        validaEmailAluno(aluno.getEmail());
+        this.alunos.add(aluno);
     }
 
-    
-    public void emitirCertificado(Aluno a) {
-        System.out.println("o aluno : " );
+    public void removerAluno(Aluno a) {
+        this.alunos.remove(a);
+    }
+
+    public void emitirCertificado() {
+        for(Aluno alunos : alunos) {
+            System.out.println("O aluno : " + alunos.getNome() + " ganhou o certificado de " + nomeCurso );
+        }
+    }
+
+    public void ExibiInfo() {
+        System.out.println();
+        System.out.println("Curso : " + nomeCurso);
+        System.out.println("Instrutor : " + instrutorResponsavel.getNome());
+        for(Aluno alunos : alunos) {
+            System.out.println("O aluno : " + alunos.getNome());
+        }
+    }
+
+    public void validaEmailAluno(String email) {
+        for (Aluno aluno : alunos) {
+            if (email == aluno.getEmail()) {
+                  throw new IllegalArgumentException("Aluno já cadastrado");
+            }
+        }
+    }
+    public void validarRegistroInstrutor(int registro) {
+        
     }
 }

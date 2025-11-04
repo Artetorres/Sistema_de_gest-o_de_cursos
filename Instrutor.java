@@ -9,9 +9,9 @@ public class Instrutor extends Pessoa {
     @Override
     public void exibirInfo() {
         System.out.println();
-        System.out.printf("Aluno : %s", getNome());
-        System.out.printf("Email : %s", getEmail());
-        System.out.printf("numero de Registro : %d", numeroRegistro);
+        System.out.printf("Instrutor : %s", getNome());
+        System.out.printf("%nEmail : %s", getEmail());
+        System.out.printf("%nnumero de Registro : %d", numeroRegistro);
         System.out.println();
     }
 }

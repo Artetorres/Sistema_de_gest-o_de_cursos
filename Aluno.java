@@ -11,8 +11,8 @@ public class Aluno extends Pessoa {
     public void exibirInfo() {
         System.out.println();
         System.out.printf("Aluno : %s", getNome());
-        System.out.printf("Email : %s", getEmail());
-        System.out.printf("numero de Matricula : %d", numeroMatricula);
+        System.out.printf("%nEmail : %s", getEmail());
+        System.out.printf("%nnumero de Matricula : %d", numeroMatricula);
         System.out.println();
     }
 }

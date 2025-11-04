@@ -7,11 +7,20 @@ public class Main {
         Aluno aluno1 = new Aluno("jorge", "jorge1@gmail.com", 10537715);
         Aluno aluno2 = new Aluno("jo", "jo@gmail.com", 10589715);
 
+        // Aluno alunoRepetido = new Aluno("jjj", "joaohenpereira@gmail.com", 1234234);
+
         Curso curso1 = new Curso("Calculo", instrutor1);
 
         curso1.adicionarAluno(aluno1);
         curso1.adicionarAluno(aluno2);
+        // curso1.adicionarAluno(alunoRepetido);
 
-        
+        curso1.ExibiInfo();
+        instrutor1.exibirInfo();
+        aluno1.exibirInfo();
+        aluno2.exibirInfo();
+        curso1.emitirCertificado();
+        curso1.removerAluno(aluno2);
+        curso1.ExibiInfo();
     }   
 }
